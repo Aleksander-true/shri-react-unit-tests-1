@@ -1,0 +1,122 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px;
+  gap: 24px;
+
+  width: 310px;
+
+  background: #FFFFFF;
+  border-radius: 8px;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lable {
+  position: absolute;
+  top: 16px;
+  left:16px;
+
+  & span {
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 14px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 3px 5px;
+    margin-right: 4px;
+  }
+}
+
+.hit {
+  background-color: #F53D3D;
+}
+
+.sale {
+  background-color: #11C66C;
+}
+
+.favoriteIcon {
+  position: absolute;
+  top: 16px;
+  right:16px;
+}
+
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #434851;
+  margin: 0;
+}
+
+.price {
+  display: flex;
+  gap: 8px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+
+  & .currentPrice{
+    color: #F20D0D;
+  }
+  & .oldPrice{
+    color: #141A25;
+    text-decoration-line: line-through;
+  }
+}
+
+.description {
+  display: flex;
+  gap: 24px;
+
+  & span {
+    background-repeat: no-repeat;
+    background-position: left;
+  }
+
+  & span::before {
+    position: relative;
+    top: 2px;
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+
+    
+  }
+
+  & .flowersCount {
+    background-image: url("/assets/flowersCountIcon.svg");
+  }
+
+  & .bouquetHeight {
+    background-image: url("/assets/bouquetWidthIcon.svg");
+  }
+
+  & .bouquetWidth {
+    background-image: url("/assets/bouquetHeightIcon.svg");
+  }
+}
