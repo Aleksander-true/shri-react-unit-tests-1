@@ -41,6 +41,10 @@ export const ProductCard = ({
           <span className={styles.flowersCount}>{bouquetWidth} см</span>
         </div>
       </div>
+      <div className={styles.buttonGroup}>
+        <button className={styles.cartBtn}>В корзину</button>
+        <button className={styles.quickSaleBtn}>Купить сразу</button>
+      </div>
     </div>
   );
 };

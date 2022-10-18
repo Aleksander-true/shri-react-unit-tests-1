@@ -120,3 +120,40 @@
     background-image: url("/assets/bouquetHeightIcon.svg");
   }
 }
+
+.buttonGroup {
+  display: flex;
+  gap: 12px;
+
+  & button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 30px;
+    border-radius: 12px;
+    background: #F6F6F6;
+    border: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    flex-grow: 1;
+    cursor: pointer;
+  }
+
+  & .cartBtn {
+    background: #CFF4E2;
+
+    &:hover {
+      background: #70DDA7;
+    }
+  }
+
+  & .quickSaleBtn {
+    background: #F6F6F6;
+
+    &:hover {
+      background: #e3e3e3;
+    }
+  }
+}
