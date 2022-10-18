@@ -139,6 +139,11 @@
     line-height: 24px;
     flex-grow: 1;
     cursor: pointer;
+
+    &:disabled {
+      cursor:not-allowed;
+      background-color: #bdbdbd;
+    }
   }
 
   & .cartBtn {

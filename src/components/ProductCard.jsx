@@ -36,14 +36,24 @@ export const ProductCard = ({
           <span className={styles.oldPrice}>{oldPrice}</span>
         </div>
         <div className={styles.description}>
-          <span className={styles.flowersCount}>{flowersCount} шт.</span>
-          <span className={styles.bouquetHeight}>{bouquetHeight} см</span>
-          <span className={styles.flowersCount}>{bouquetWidth} см</span>
+          {flowersCount > 0 && (
+            <span className={styles.flowersCount}>{flowersCount} шт.</span>
+          )}
+          {bouquetHeight > 0 && (
+            <span className={styles.bouquetHeight}>{bouquetHeight} см</span>
+          )}
+          {bouquetWidth > 0 && (
+            <span className={styles.flowersCount}>{bouquetWidth} см</span>
+          )}
         </div>
       </div>
       <div className={styles.buttonGroup}>
-        <button className={styles.cartBtn}>В корзину</button>
-        <button className={styles.quickSaleBtn}>Купить сразу</button>
+        <button className={styles.cartBtn} disabled={flowersCount <= 0}>
+          В корзину
+        </button>
+        <button className={styles.quickSaleBtn} disabled={flowersCount <= 0}>
+          Купить сразу
+        </button>
       </div>
     </div>
   );
